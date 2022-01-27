@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #F3F3FB;
+}
+
+.examen{
+    background-color: white;
+    padding: 3rem;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    max-width:600px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+h1{
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+ul{
+    list-style: none;
+    margin-left: 40px;
+}
+
+ul li{
+    margin-top: 20px;
+    
+}
+input[type='radio'] { 
+    transform: scale(1.5); 
+}
+
+label{
+    margin-left: 10px;
+}
+
+button{
+    background-color: #4370E7 ;
+    width: 100%;
+    border: none;
+    height: 4rem;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    font-weight: 200;
+    font-size: 1.2rem;
+    color: white;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+button:hover{
+    background-color: #1f4cc5   
+}
+
+.puntaje{
+    margin-bottom: 0;
+}

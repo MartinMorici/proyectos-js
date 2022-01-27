@@ -1,0 +1,259 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #B6AAAA;
+    flex-direction: column;
+}
+
+img{
+    max-width: 100%;
+}
+.container{
+    background-color: #ffff;
+    margin-top: 5rem;
+    width: 350px;
+    border-radius: 40px ;
+    margin-bottom: 3rem;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+    padding: 1.5rem;
+}
+
+.header input{
+    width: 85%;
+    padding: 1rem;
+    border-radius: 14px;
+    border: none;
+    background-color: #E4E4E4 ;
+    font-family: inherit;
+}
+.header input::placeholder{
+    color:#9E9E9E;
+}
+
+.header img{
+    cursor: pointer;
+}
+
+.favoritos{
+    background: linear-gradient(245.94deg, #5EBF6D 42.54%, #A8EB12 192.11%);
+    padding: 1rem 0.5rem;
+    min-height: 180px;
+}
+
+.favoritos__lista{
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 23%;
+    position: relative;
+}
+
+.item-eliminar{
+    position: absolute;
+    top: 0;
+    right: 4px;
+    width: 15px;
+    cursor: pointer;
+    opacity: 0;
+}
+
+.item:hover .item-eliminar{
+    opacity: 1;
+}
+
+.favoritos__lista span{
+    display: inline-block;
+    width: 100%;
+    text-align:center ;
+    font-size: 12px;
+    color: white;
+    margin-top: 5px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.favoritos h2{
+    font-size: 20px;
+    text-align: center;
+    font-weight: normal;
+}
+
+.favoritos .item-img{
+    border-radius: 50%;
+    width: 70%;
+    border: 2px solid white;
+}
+
+.receta-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2.5rem;
+    min-height: 280px;
+    flex-direction: column;
+}
+
+.receta{
+    width: 280px;
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.receta__imagen{
+    border-radius: 19px;
+    filter: brightness(80%);
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+
+
+.receta__info{
+    width: 100%;
+    position: absolute;
+    bottom: 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 18px;
+    padding: 1rem;
+}
+
+.receta__info h3{
+    font-weight: 600;
+    color: white;
+    width: 200px;
+}
+
+.receta span{
+    position: absolute;
+    top: 1rem;
+    background-color: #1B5622 ;
+    color: white;
+    font-weight: 200;
+    border-radius: 0px 10px 10px 0px;
+    padding: 0.2rem 1rem;
+    z-index: 1;
+}
+
+
+.corazon{
+    padding: 0.35rem;
+    border-radius: 5px;
+}
+
+.corazon-active{
+    filter: brightness(0) saturate(100%) invert(91%) sepia(100%) saturate(5813%) hue-rotate(19deg) brightness(97%) contrast(90%);;
+}
+
+.cuadrado{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #725644;
+    width: fit-content;
+    border-radius: 5px;
+    width: 28.18px;
+    height: 27.17px;
+    cursor: pointer;
+}
+
+
+.popup-container{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.383);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 3;
+
+}
+
+.popup-container.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.receta-popup{
+    padding: 2rem;
+    background-color: white;
+    max-width: 500px;
+    position: relative;
+    max-height: 95vh;
+    overflow: auto;
+}
+
+.receta-popup h1{
+    text-align: center;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+
+.receta-popup h3{
+    margin: 1rem 0px 0.2rem 0px;
+}
+
+.receta-popup ul{
+    padding: 0px 18px;
+}
+
+.receta-cerrar{
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    width: 20px;
+    cursor: pointer;
+}
+
+.recetaClick{
+    cursor: pointer;
+}
+
+.no-favorito{
+    margin-top: 1rem;
+    font-size: 14px;
+    color: rgb(255, 255, 255);
+    font-weight: 200;
+}
+
+.receta-instrucciones{
+    text-align: justify;
+}
+
+.atribucion{
+    text-align: center;
+    color: white;
+}
+
+.abrirFav{
+    cursor: pointer;
+}

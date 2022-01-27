@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div>
+        <main class="container">
+            <section class="header">
+                <input id="buscador" type="text" placeholder="Buscar">
+                <img id="iconoBuscar" src="lupa.svg" alt="">
+            </section>
+            <section class="favoritos">
+                <h2>Tus recetas favoritas</h2>
+                <div class="favoritos__lista" id="favoritos">
+                </div>
+            </section>
+            <section class="receta-container" id="receta_container">
+            </section>
+        </main>
+        
+        <div class="popup-container hidden" id="popup-container">
+            <aside  class="receta-popup" id="receta-popup">
+                <img class="receta-cerrar" id="receta-cerrar" src="./cerrarPopup.svg" alt="">
+                <div id="receta-info">
+                </div>
+            </aside>
+        </div>
+    </div>
+
+    <div class="atribucion">
+        Coded by <a href="https://www.linkedin.com/in/mart%C3%ADn-morici-2008a51a2/" target="_blank">Martín Morici</a>.
+    </div>
+    
+    <script src="./script.js"></script>
+</body>
+</html>
