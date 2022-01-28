@@ -1,0 +1,94 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  user-select: none;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #034d74;
+}
+
+.add-nota {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  padding: 2rem 3rem 1rem 0rem;
+  color: white;
+  font-size: 40px;
+  align-items: center;
+}
+.notas-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-basis: 25%;
+  margin-bottom: 1rem;
+}
+
+.nota {
+  background-color: #fef2b4;
+  width: 420px;
+  height: 400px;
+  margin: 1rem;
+  position: relative;
+}
+
+.nota-iconos {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.7rem;
+  font-size: 18px;
+  background-color: #ffb804;
+}
+i {
+  cursor: pointer;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+}
+.fa-trash {
+  margin-left: 10px;
+}
+
+textarea {
+  width: 100%;
+  height: calc(400px - 40.38px);
+  background-color: #f7e588;
+  outline: none;
+  border: none;
+  padding: 1rem;
+  font-size: 17px;
+  font-family: Poppins;
+  resize: none;
+}
+
+.hidden {
+  display: none;
+}
+
+.div-texto {
+  padding: 0.5rem;
+  width: 100%;
+  height: calc(400px - 40.38px);
+  position: absolute;
+  top: 40.38px;
+}
+
+.add-nota .span {
+  font-size: 18px;
+  margin-left: 12px;
+  font-family: Poppins;
+  font-weight: 400;
+}
+
+.nota-iconos i span {
+  font-size: 14px;
+  font-family: poppins;
+  margin-left: 5px;
+}
