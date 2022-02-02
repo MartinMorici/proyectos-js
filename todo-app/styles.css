@@ -61,4 +61,5 @@ span {
 .contenedor-tareas .completa {
   color: #787a91;
   text-decoration: line-through;
+  user-select: none;
 }
