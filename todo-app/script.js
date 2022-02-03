@@ -1,57 +1,63 @@
 const input = document.getElementById("input");
 const tareasCont = document.getElementById("contenedor-tareas");
 
-const tareas = getTareasLS();
-tareas.forEach((e) => {
-  setTarea(e);
-});
+const todos = JSON.parse(localStorage.getItem("tareas"));
+
+if (todos) {
+  todos.forEach((e) => {
+    setTarea(e);
+  });
+}
 
 input.addEventListener("keyup", (e) => {
   if (e.key === "Enter") {
-    setTarea(input.value);
-    if (input.value != "") {
-      addTareaLS(input.value);
-    }
-
-    input.value = null;
+    setTarea();
   }
 });
 
-function setTarea(texto) {
-  if (texto != "") {
+function setTarea(tarea) {
+  let texto = input.value;
+
+  if (tarea) {
+    texto = tarea.text;
+  }
+
+  if (texto) {
     const div = document.createElement("div");
     div.classList.add("cont-receta");
-    div.innerHTML = texto;
-
-    tareasCont.appendChild(div);
+    div.innerText = texto;
+    if (tarea && tarea.completed) {
+      div.classList.add("completa");
+    }
 
     div.addEventListener("click", () => {
       div.classList.toggle("completa");
+      updateLS();
     });
 
     div.addEventListener("contextmenu", (e) => {
       e.preventDefault();
-      removeTareaLS(texto);
       div.remove();
+      updateLS();
     });
+
+    tareasCont.appendChild(div);
+    updateLS();
+    input.value = "";
   }
 }
 
-function addTareaLS(texto) {
-  const tareas = getTareasLS();
+function updateLS() {
+  const todosEl = document.querySelectorAll(".cont-receta");
 
-  localStorage.setItem("tarea", JSON.stringify([...tareas, texto]));
-}
+  const todos = [];
 
-function removeTareaLS(texto) {
-  const tareas = getTareasLS();
-  localStorage.setItem(
-    "tarea",
-    JSON.stringify(tareas.filter((tarea) => tarea != texto))
-  );
-}
+  todosEl.forEach((todoEl) => {
+    todos.push({
+      text: todoEl.innerText,
+      completed: todoEl.classList.contains("completa"),
+    });
+  });
 
-function getTareasLS() {
-  const tareas = JSON.parse(localStorage.getItem("tarea"));
-  return tareas === null ? [] : tareas;
+  localStorage.setItem("tareas", JSON.stringify(todos));
 }
