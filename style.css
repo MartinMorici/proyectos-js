@@ -55,6 +55,14 @@ main {
 .arrow {
    position: relative;
 }
+article {
+   max-width: 500px;
+   background-color: white;
+}
+
+.text {
+   padding: 0.3rem 0.7rem;
+}
 .arrow__svg {
    position: absolute;
    bottom: 20px;
