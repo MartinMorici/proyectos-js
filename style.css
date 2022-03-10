@@ -38,14 +38,6 @@ img {
    max-width: 100%;
 }
 
-article {
-   max-width: 500px;
-   background-color: white;
-}
-
-.text {
-   padding: 0.3rem 0.7rem;
-}
 
 div p {
    margin-top: 1rem;
