@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Cinzel:wght@600;700&family=Didact+Gothic&family=Poppins:wght@300;400;600;700&display=swap');
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+body {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   font-family: 'Poppins', sans-serif;
+   background-color: rgb(228 225 225);
+}
+
+header {
+   margin: 2rem 0rem 4rem 0rem;
+   text-align: center;
+}
+h2 {
+   font-weight: 400;
+}
+
+header div {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+div h2 {
+   width: 67%;
+}
+h3 {
+   font-weight: 700;
+}
+
+img {
+   max-width: 100%;
+}
+
+article {
+   max-width: 500px;
+   background-color: white;
+}
+
+article div {
+   padding: 0.3rem 0.7rem;
+}
+
+div p {
+   margin-top: 1rem;
+}
+
+main {
+   width: 100%;
+   display: grid;
+   gap: 4rem;
+   grid-template-columns: repeat(auto-fill, minmax(min(100%, 25rem), 1fr));
+   justify-items: center;
+   padding: 3rem;
+}
+
+.arrow {
+   position: relative;
+}
+.arrow__svg {
+   position: absolute;
+   bottom: 20px;
+   right: 28px;
+   width: 51px;
+   height: 35px;
+   background-color: #f9dbce;
+   padding: 0.2rem;
+   border-radius: 8px;
+   cursor: pointer;
+   transition: 0.1s;
+}
+.arrow__svg:active {
+   transform: scale(0.96);
+   transition: 0.1s;
+}
+
+@media (max-width: 450px) {
+   main {
+      padding: 0.5rem;
+   }
+   header h1 {
+      font-size: 22px;
+   }
+   header div h2 {
+      font-size: 18px;
+   }
+}
+@media (max-width: 800px) {
+   div h2 {
+      width: 80%;
+   }
+}
